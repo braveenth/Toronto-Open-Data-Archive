@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Configuration
+WORKDIR=/opt/Toronto-Open-Data
+APACHEDIR=/etc/apache2
+
+# Check
+if [ ! -e ${WORKDIR} ]; then
+   echo 'Unable to find work directory: ' ${WORKDIR} >&2
+   exit 1
+fi
+
+if [ ! -e ${APACHEDIR} ]; then
+   echo 'Unable to find Apache configuration directory: ' ${APACHEDIR} >&2
+   exit 1
+fi
